@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" type="text/javascript" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js" integrity="sha512-QTnb9BQkG4fBYIt9JGvYmxPpd6TBeKp6lsUrtiVQsrJ9sb33Bn9s0wMQO9qVBFbPX3xHRAsBHvXlcsrnJjExjg==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/javascript" defer></script>
     <script src="js/script.js" type="text/javascript" defer></script>
@@ -14,12 +15,12 @@
         <main>
             <div>
                 <div v-for="randomNumber in randomNumbersList">
-                    <span v-if="randomNumber%2 === 0">{{randomNumber}}</span>
+                    <span v-if="randomNumber%2 === 0" class="green-color">{{randomNumber}}</span>
                 </div>
             </div>
             <div>
                 <div v-for="randomNumber in randomNumbersList">
-                    <span v-if="randomNumber%2 === 1">{{randomNumber}}</span>
+                    <span v-if="randomNumber%2 === 1" class="red-color">{{randomNumber}}</span>
                 </div>
             </div>
             <button type="button" @click="getARandomNumber()"></button>
