@@ -14,14 +14,14 @@
     <div id="app">
         <main>
             <div>
-                <div v-for="randomNumber in randomNumbersList">
-                    <span v-if="randomNumber%2 === 0" class="green-color">{{randomNumber}}</span>
-                </div>
+                <ul v-for="randomNumber in randomNumbersList">
+                    <li v-if="randomNumber%2 === 0" class="green-color">{{randomNumber}}</li>
+                </ul>
             </div>
             <div>
-                <div v-for="randomNumber in randomNumbersList">
-                    <span v-if="randomNumber%2 === 1" class="red-color">{{randomNumber}}</span>
-                </div>
+                <ul v-for="randomNumber in randomNumbersList">
+                    <li v-if="randomNumber%2 === 1" class="red-color">{{randomNumber}}</li>
+                </ul>
             </div>
             <button type="button" @click="getARandomNumber()"></button>
         </main>
