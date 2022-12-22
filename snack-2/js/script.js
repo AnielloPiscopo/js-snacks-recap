@@ -12,6 +12,7 @@ createApp({
         return{
             randomGuestsList : [],
             totalGuests : 10,
+            userName: '',
         }
     },
 

@@ -12,10 +12,18 @@
 <body>
     <div id="app">
         <main>
-            <input type="text">
-            <ul v-if="(randomGuestsList.length === totalGuests)">
-                <li v-for="randomGuest in randomGuestsList">{{randomGuest}}</li>
-            </ul>
+            <div id="guests-list" v-if="(randomGuestsList.length === totalGuests)">
+                <input type="text" v-model.trim.lazy="userName">
+                <ul>
+                    <li v-for="randomGuest in randomGuestsList">{{randomGuest}}</li>
+                </ul>
+                <div id="final-response" v-if="userName !== ''">
+                    <span>{{(randomGuestsList.includes(userName)) ? 'sei presente nella lista' : 'non sei presente nella lista'}}</span>
+                </div>
+            </div>
+            <div v-else>
+                <span>Caricamento in corso ...</span>
+            </div>
         </main>
     </div>
 </body>
