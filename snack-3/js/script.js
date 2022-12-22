@@ -44,7 +44,7 @@ createApp({
         },
 
         receiveAMessage(){
-            setTimeout(this.getARandomPhrase,3000);
+            setTimeout(this.getARandomPhrase,1000);
         }
     },
 }).mount('#app')
